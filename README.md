@@ -88,11 +88,9 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps('Success')
     }
-
-```markdown
+```
 ## Architecture
 
-```text
 S3 (File Upload)
       │
       ▼
@@ -105,3 +103,4 @@ SNS (Notification)
       │
       ▼
 Email
+```
