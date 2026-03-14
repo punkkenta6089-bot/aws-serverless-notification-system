@@ -91,6 +91,7 @@ def lambda_handler(event, context):
 ```
 ## Architecture
 
+```text
 S3 (File Upload)
       │
       ▼
