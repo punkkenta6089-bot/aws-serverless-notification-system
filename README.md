@@ -91,19 +91,3 @@ def lambda_handler(event, context):
         'body': json.dumps('Success')
     }
 ```
-## Architecture
-
-```text
-S3 (File Upload)
-      │
-      ▼
-Lambda (Trigger / Process)
-      │
-      ├──► DynamoDB (Store Record)
-      │
-      ▼
-SNS (Notification)
-      │
-      ▼
-Email
-```
