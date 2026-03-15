@@ -8,7 +8,7 @@ The Lambda function stores record data in Amazon DynamoDB and sends an email not
 
 ## Architecture
 
-![Architecture]()
+![Architecture](architecture-diagram.png)
 S3 → Lambda → DynamoDB → SNS → Email
 
 ## AWS Services Used
