@@ -7,6 +7,8 @@ When a file is uploaded to Amazon S3, AWS Lambda is triggered automatically.
 The Lambda function stores record data in Amazon DynamoDB and sends an email notification via Amazon SNS.
 
 ## Architecture
+
+![Architecture](architecture.png)
 S3 → Lambda → DynamoDB → SNS → Email
 
 ## AWS Services Used
