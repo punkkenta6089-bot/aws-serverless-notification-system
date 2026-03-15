@@ -11,6 +11,7 @@ sns = boto3.client('sns')
 TOPIC_ARN = "YOUR_SNS_TOPIC_ARN"
 
 def lambda_handler(event, context):
+    
     record_id = str(uuid.uuid4())
     now = datetime.now().isoformat()
 
@@ -21,11 +22,15 @@ def lambda_handler(event, context):
         }
     )
 
+    print("Record saved to DynamoDB")
+
     sns.publish(
         TopicArn=TOPIC_ARN,
-        Message="A file has been uploaded to S3.",
+        Message="S3にファイルがアップロードされました！",
         Subject="Portfolio Notification"
     )
+
+    print("SNS notification sent")
 
     return {
         'statusCode': 200,
